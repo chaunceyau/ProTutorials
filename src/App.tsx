@@ -5,6 +5,7 @@ import { Container } from 'semantic-ui-react';
 import NavigationBar from './components/NavigationBar';
 import Home from './views/Home';
 import Series from './views/Series';
+import Video from './views/Video';
 
 export default class App extends Component {
     render() {
@@ -16,6 +17,7 @@ export default class App extends Component {
                         <Route exact path='/' component={Home} />
                         <Route exact path='/series' component={Series} />
                         <Route exact path='/series/:id' component={Series} />
+                        <Route exact path='/video/:id' component={Video} />
                     </Switch>
                 </Router>
             </Container>

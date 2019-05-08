@@ -1,20 +1,15 @@
 import React from 'react';
-import { Accordion, Segment } from 'semantic-ui-react';
-import Category from './Category';
+import { Segment } from 'semantic-ui-react';
+// 
+import { ICategory } from './Category';
 import Objectives from './Objectives';
+import SeriesContent from './SeriesContent';
 import { IInstructor } from './SeriesSidebar';
-
 export interface IVideo {
     id: string,
     title: string,
     resume_time: number,
     video_length: number
-}
-
-interface ICategory {
-    id: string,
-    title: string,
-    videos: IVideo[]
 }
 
 interface IProps {
@@ -38,9 +33,7 @@ const SeriesMain:React.SFC<IProps> = (props: IProps) => (
         
         {/*  */}
         <h3>Series Content</h3>
-        <Accordion styled fluid>
-            {props.categories.map(info => <Category key={info.id} {...info} />)}
-        </Accordion>
+        <SeriesContent categories={props.categories} />
         
     </Segment>
 )

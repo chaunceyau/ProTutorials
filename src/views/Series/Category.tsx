@@ -3,6 +3,12 @@ import { Accordion, Icon } from 'semantic-ui-react';
 import { IVideo } from './SeriesMain';
 import VideoSegment from './VideoSegment';
 
+export interface ICategory {
+  id: string,
+  title: string,
+  videos: IVideo[]
+}
+
 interface IProps {
   id: string,
   title: string, 

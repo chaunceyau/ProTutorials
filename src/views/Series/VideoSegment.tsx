@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Icon, Segment } from 'semantic-ui-react';
+import { formatSecondsToVideoTime } from '../../util/func';
 
 interface IProps {
   id: string,
@@ -18,7 +19,7 @@ export default class VideoSegment extends React.Component<IProps, IState> {
     const {  id, title, resume_time, video_length, attached } = this.props
     return (
       <Segment attached={attached} key={id} disabled>
-        <Link to='/sdlfm'>
+        <Link to={`/video/${id}`}>
           <Grid>
               <Grid.Row columns={2}>
                   <Grid.Column>
@@ -32,7 +33,7 @@ export default class VideoSegment extends React.Component<IProps, IState> {
                   <Grid.Column textAlign='right'>
                       {
                           resume_time > 0 ? 
-                              <span>{(formatMillisecondsToVideoTime(resume_time))} of {(formatMillisecondsToVideoTime(video_length))}</span>
+                              <span>{(formatSecondsToVideoTime(resume_time))} of {(formatSecondsToVideoTime(video_length))}</span>
                               :
                               <b>Not Started</b>
                       }
@@ -43,18 +44,4 @@ export default class VideoSegment extends React.Component<IProps, IState> {
     </Segment>
     );
   }
-}
-
-
-function formatMillisecondsToVideoTime(second: number): string {
-  const   seconds = Math.floor(second  % 60),
-          minutes = Math.floor((second / (60) % 60)),
-          hours   = Math.floor((second / (60*60) % 24))
-  
-  const modifiedSeconds = seconds === 0 ? '00' : seconds
-  const modifiedMinutes = minutes < 10 ? `0${minutes}` : minutes
-  // return `${hours > 0 && `${hours}:`} ${minutes > 0 && `${minutes}:`} ${seconds}`
-  if (hours > 0)
-      return `${hours}:${modifiedMinutes}:${modifiedSeconds}`
-  return `${modifiedMinutes}:${modifiedSeconds}`
 }
