@@ -15,33 +15,33 @@ interface IState {
 }
 
 export default class VideoSegment extends React.Component<IProps, IState> {
-   render() {
-    const {  id, title, resume_time, video_length, attached } = this.props
+  render() {
+    const { id, title, resume_time, video_length, attached } = this.props
     return (
-      <Segment attached={attached} key={id} disabled>
+      <Segment attached={attached} key={id} >
         <Link to={`/video/${id}`}>
           <Grid>
-              <Grid.Row columns={2}>
-                  <Grid.Column>
-                      {
-                          resume_time > 0 ? 
-                              <span><Icon name='play circle outline' />&nbsp; {title}</span>
-                              :
-                              <b><Icon name='play circle' />&nbsp; {title}</b>
-                      }
-                  </Grid.Column>     
-                  <Grid.Column textAlign='right'>
-                      {
-                          resume_time > 0 ? 
-                              <span>{(formatSecondsToVideoTime(resume_time))} of {(formatSecondsToVideoTime(video_length))}</span>
-                              :
-                              <b>Not Started</b>
-                      }
-                  </Grid.Column>
-              </Grid.Row>
+            <Grid.Row columns={2}>
+              <Grid.Column>
+                {
+                  resume_time > 0 ?
+                    <span><Icon name='play circle outline' />&nbsp; {title}</span>
+                    :
+                    <b><Icon name='play circle' />&nbsp; {title}</b>
+                }
+              </Grid.Column>
+              <Grid.Column textAlign='right'>
+                {
+                  resume_time > 0 ?
+                    <span>{(formatSecondsToVideoTime(resume_time))} of {(formatSecondsToVideoTime(video_length))}</span>
+                    :
+                    <b>Not Started</b>
+                }
+              </Grid.Column>
+            </Grid.Row>
           </Grid>
         </Link>
-    </Segment>
+      </Segment>
     );
   }
 }

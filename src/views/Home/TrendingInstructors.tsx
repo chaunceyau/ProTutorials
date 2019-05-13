@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, Header, Icon, Image } from 'semantic-ui-react';
+import { Card, Header } from 'semantic-ui-react';
+import TrendingInstructorCard from '../../components/InstructorCard';
 
 export default class TrendingInstructors extends Component {
     render() {
@@ -20,31 +21,6 @@ export default class TrendingInstructors extends Component {
     }
 }
 
-interface TrendingInstructorCardProps {
-    id: string,
-    name: string,
-    imageURL: string,
-    totalStudents: number,
-    description: string,
-    sport: string
-}
-
-const TrendingInstructorCard: React.FC<TrendingInstructorCardProps> = ({ id, name, imageURL, totalStudents, description, sport }) => {
-    return (
-        <Card onClick={() => { }}>
-            <Image src={imageURL} />
-            <Card.Content header={name} description={description} meta={sport} />
-            <Card.Content
-                extra
-                children={
-                    <React.Fragment>
-                        <Icon name="user circle" /> <span>{totalStudents.toLocaleString()} students</span>
-                    </React.Fragment>
-                }
-            />
-        </Card>
-    )
-}
 
 const trendingInstructors = [
     {

@@ -1,13 +1,15 @@
 import * as React from 'react';
+import { RouteComponentProps } from 'react-router';
 
-export interface IInstructorProps {
+export interface IProps extends RouteComponentProps<{ id: string }> {
+
 }
 
-export default class Instructor extends React.Component<IInstructorProps, any> {
-  public render() {
+export default class InstructorView extends React.Component<IProps, any> {
+  render() {
     return (
       <div>
-        Instructord
+        Instructor id: {this.props.match.params.id}
       </div>
     );
   }

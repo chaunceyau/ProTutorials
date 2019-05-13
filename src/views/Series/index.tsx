@@ -9,7 +9,7 @@ interface SeriesProps {
     id: string
 }
 
-const Series = ({ match }: RouteComponentProps<SeriesProps>) => (
+const SeriesView = ({ match }: RouteComponentProps<SeriesProps>) => (
     <Segment>
         <Grid stackable>
             <Grid.Row>
@@ -29,8 +29,8 @@ const Series = ({ match }: RouteComponentProps<SeriesProps>) => (
                                         <Icon name='star half' />
                                         <b>(10,000 ratings)</b>   
                                     </h3> */}
-                                    <Button as='a' compact color='green' onClick={()=>{}}>
-                                            Purchase: $19.99
+                                    <Button as='a' compact color='green' onClick={() => { }}>
+                                        Purchase: $19.99
                                         </Button>
                                 </Grid.Column>
                             </Grid.Row>
@@ -40,20 +40,20 @@ const Series = ({ match }: RouteComponentProps<SeriesProps>) => (
             </Grid.Row>
             <Grid.Row columns={2}>
                 <Grid.Column width='eleven'>
-                    <SeriesMain 
+                    <SeriesMain
                         instructor={series_video_data.instructor}
-                        title={series_video_data.title} 
+                        title={series_video_data.title}
                         categories={series_video_data.categories}
                         objectives={series_video_data.objectives}
                         description={series_video_data.description}
                     />
                 </Grid.Column>
                 <Grid.Column width='five'>
-                    <SeriesSidebar 
-                        title={series_video_data.title} 
-                        instructor={series_video_data.instructor} 
-                        description={series_video_data.description} 
-                        image_url={series_video_data.image_url} 
+                    <SeriesSidebar
+                        title={series_video_data.title}
+                        instructor={series_video_data.instructor}
+                        description={series_video_data.description}
+                        image_url={series_video_data.image_url}
                     />
                 </Grid.Column>
             </Grid.Row>
@@ -61,4 +61,4 @@ const Series = ({ match }: RouteComponentProps<SeriesProps>) => (
     </Segment>
 )
 
-export default Series
+export default SeriesView

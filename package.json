@@ -8,6 +8,8 @@
     "@types/react": "16.8.16",
     "@types/react-dom": "16.8.4",
     "@types/react-router-dom": "^4.3.3",
+    "firebase": "^6.0.2",
+    "firebaseui": "^3.6.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-player": "^1.11.0",

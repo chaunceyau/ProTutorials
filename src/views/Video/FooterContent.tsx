@@ -1,5 +1,6 @@
 import React from 'react';
 import { Segment } from 'semantic-ui-react';
+import Discussion from './Discussion';
 
 interface IProps {
     section: string
@@ -8,11 +9,13 @@ interface IProps {
 export const video_menu_items = [
     'overview',
     'discussion',
-    'annoucements'
+    'annoucements',
+    'upcoming events',
+    'live sessions'
 ]
 
 function renderContentSection(props_section: string): React.ClassicElement<any> {
-    switch(props_section) {
+    switch (props_section) {
         case 'overview':
             return <Overview />
         case 'discussion':
@@ -36,10 +39,6 @@ const Overview: React.FC<any> = (props: any) => (
 
 const Annoucements: React.FC<any> = (props: any) => (
     <span>annoucements</span>
-)
-
-const Discussion: React.FC<any> = (props: any) => (
-    <span>discussion</span>
 )
 
 const Error: React.FC<any> = (props: any) => (
