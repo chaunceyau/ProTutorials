@@ -1,20 +1,9 @@
-# kind: pipeline
-# name: default
-
-# steps:
-# - name: test
-#   image: node
-#   commands:
-#   - npm install
-#   - npm test
-#   - npm run build
-
 kind: pipeline
 name: default
 
 steps:
-  - name: "build docker image"
-  image: docker
-  commands: 
-  - docker build -t achauncey/frontend-protutorials
-  - docker run achauncey/frontend-protutorials
+  - name: dockerize
+    image: docker
+    commands: 
+    - docker build -t achauncey/frontend-protutorials
+    - docker run achauncey/frontend-protutorials
