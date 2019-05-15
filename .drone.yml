@@ -5,5 +5,5 @@ steps:
   - name: dockerize
     image: docker
     commands: 
-    - docker build -t achauncey/frontend-protutorials
+    - docker build -t achauncey/frontend-protutorials .
     - docker run achauncey/frontend-protutorials
