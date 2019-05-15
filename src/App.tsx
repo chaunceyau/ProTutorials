@@ -5,6 +5,7 @@ import { Container } from 'semantic-ui-react';
 import NavigationBar from './components/NavigationBar';
 import Routes from './Routes';
 
+// entry point from index.tsx
 
 const App: React.FC<any> = () => (
     <Container style={{ paddingTop: 15 }}>
