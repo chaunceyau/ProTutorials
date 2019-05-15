@@ -4,6 +4,7 @@ name: default
 steps:
   - name: dockerize
     image: docker
+    privileged: true
     commands: 
     - docker build -t achauncey/frontend-protutorials .
     - docker run achauncey/frontend-protutorials
