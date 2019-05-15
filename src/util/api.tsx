@@ -1,7 +1,9 @@
 export const series_video_data = {
     id: '023443',
     title: 'Takedown Clinic',
-    image_url: 'https://i.pinimg.com/originals/15/33/98/153398ec3601a31fe8b61761d6a43f26.jpg',
+    image_url: 'http://localhost:3000/static/media/burroughs2.d66ae9fe.jpg',
+    // image_url: 'https://i.pinimg.com/originals/15/33/98/153398ec3601a31fe8b61761d6a43f26.jpg',
+    total_students: 10230,
     instructor: {
         id: '439kf34',
         name: 'Jordan Burroughs',
@@ -15,6 +17,9 @@ export const series_video_data = {
         'Don’t let that rear leg drag behind and put all of the stress on the lead leg.',
         'The double leg merely offsets your opponents balance, allowing you to drive them to the ground.'
     ],
+    sport: {
+        title: 'Wrestling'
+    },
     description: 'The staff will host three team camps and three specialized individual camps. Wrestlers in attendance will have a chance to learn from and compete with the Husker wrestling staff and team members. Head Coach Mark Manning will provide instruction at each camp as well as numerous guest instructors.',
     categories: [
         {

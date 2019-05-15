@@ -1,10 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Explore from './views/Explore';
+import About from './views/About';
+import Auth from './views/Auth';
 // 
 import Home from './views/Home';
 import Instructor from './views/Instructor';
 import Series from './views/Series';
+import Sport from './views/Sport';
 import Video from './views/Video';
 
 const Routes = () => (
@@ -36,13 +38,21 @@ const routes = [
 
     },
     {
-        path: '/explore',
-        component: Explore
+        path: '/about',
+        component: About
     },
     {
         path: '/instructor/:id',
         component: Instructor
-    }
+    },
+    {
+        path: '/sport',
+        component: Sport
+    },
+    {
+        path: '/auth',
+        component: Auth
+    },
 
 ]
 

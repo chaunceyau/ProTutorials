@@ -6,7 +6,8 @@ import NavigationBar from './components/NavigationBar';
 import Routes from './Routes';
 
 
-export default class App extends Component {
+class App extends Component {
+
     render() {
         return (
             <Container style={{ paddingTop: 15 }}>
@@ -18,3 +19,6 @@ export default class App extends Component {
         )
     }
 }
+
+
+export default App

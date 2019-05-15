@@ -16,17 +16,12 @@ export interface IVideoProps {
 export default class Video extends React.Component<IVideoProps, any> {
     player: any;
 
-    constructor(props: IVideoProps) {
-        super(props)
-    }
-
     componentDidMount() {
         console.log('PLAYEr ', this.player)
 
     }
 
     render() {
-        const resume_time = 33
         const { id } = this.props.match.params
         const video = series_video_data.categories[0].videos[0]
 
@@ -36,7 +31,7 @@ export default class Video extends React.Component<IVideoProps, any> {
         return (
             <React.Fragment>
                 <Segment attached="top">
-                    <h3>{series_video_data.title}</h3>
+                    <h3>{series_video_data.title} {id}</h3>
                 </Segment>
                 <Segment attached="bottom">
                     <Grid padded={false}>

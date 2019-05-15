@@ -28,16 +28,16 @@ const trendingInstructors = [
         name: 'Kobe Bryant',
         sport: 'Basketball',
         description: 'Kobe Bean Bryant, often referred to mononymously as Kobe, is an American former professional basketball player.',
-        imageURL: require('../../assets/1080p/kobe2.jpg'),
-        totalStudents: 11493
+        image_url: require('../../assets/1080p/kobe2.jpg'),
+        total_students: 11493
     },
     {
         id: '231431',
         name: 'Jordan Burroughs',
         sport: 'Wrestling',
         description: 'Jordan Burroughs is an wrestler for Team USA and is both an Olympic champion and four-time world champion.',
-        imageURL: require('../../assets/1080p/burroughs2.jpg'),
-        totalStudents: 10392
+        image_url: require('../../assets/1080p/burroughs2.jpg'),
+        total_students: 10392
 
     },
     {
@@ -45,23 +45,23 @@ const trendingInstructors = [
         name: 'Tiger Woods',
         sport: 'Golf',
         description: 'Eldrick Tont "Tiger" Woods is an American professional golfer who is considered one of the greatest golfers of all time. ',
-        imageURL: require('../../assets/1080p/tiger2.jpg'),
-        totalStudents: 9430
+        image_url: require('../../assets/1080p/tiger2.jpg'),
+        total_students: 9430
     },
     {
         id: 'f40kf4',
         name: 'Kevin Durant',
         sport: 'Basketball',
         description: 'Kevin Wayne Durant is an American professional basketball player for the Golden State Warriors.',
-        imageURL: require('../../assets/1080p/durant2.jpg'),
-        totalStudents: 8439
+        image_url: require('../../assets/1080p/durant2.jpg'),
+        total_students: 8439
     },
     {
         id: 'f40433',
         name: 'Jayson Tatum',
         sport: 'Basketball',
         description: 'Jayson Christopher Tatum is an American professional basketball player for the Boston Celtics.',
-        imageURL: require('../../assets/1080p/tatum2.jpg'),
-        totalStudents: 3490
+        image_url: require('../../assets/1080p/tatum2.jpg'),
+        total_students: 3490
     }
 ]
