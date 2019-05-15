@@ -6,7 +6,7 @@ import NavigationBar from './components/NavigationBar';
 import Routes from './Routes';
 
 
-const App: React.FC<any> = () => (
+const App: React.FC<{}> = () => (
     <Container style={{ paddingTop: 15 }}>
         <Router>
             <NavigationBar />
