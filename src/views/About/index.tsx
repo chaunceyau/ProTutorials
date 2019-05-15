@@ -12,28 +12,3 @@ export default class About extends React.Component<IProps, any> {
         );
     }
 }
-
-const sports = [
-    {
-        title: 'Football',
-        series: [
-            {
-                title: 'test'
-            },
-            {
-                title: 'tlesmd'
-            }
-        ]
-    },
-    {
-        title: 'Wrestling',
-        series: [
-            {
-                title: 'Double legs'
-            },
-            {
-                title: 'singles legs'
-            }
-        ]
-    }
-]

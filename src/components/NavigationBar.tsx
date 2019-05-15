@@ -3,10 +3,10 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 
-const NavigationBar = (props: any) => {
+const NavigationBar: React.FC<any> = (props: any) => {
 
-    const provider = new firebase.auth.GoogleAuthProvider
-    const email = 'test@test.com', password = 'pass01'
+    const provider = new firebase.auth.GoogleAuthProvider()
+    // const email = 'test@test.com', password = 'pass01'
     return (
         <Menu inverted color="red">
             <Menu.Item header>
@@ -27,12 +27,12 @@ const NavigationBar = (props: any) => {
                         console.log('fuck', error)
 
                         // Handle Errors here.
-                        var errorCode = error.code;
-                        var errorMessage = error.message;
+                        // var errorCode = error.code;
+                        // var errorMessage = error.message;
                         // The email of the user's account used.
-                        var email = error.email;
+                        // var email = error.email;
                         // The firebase.auth.AuthCredential type that was used.
-                        var credential = error.credential;
+                        // var credential = error.credential;
                         // ...
                     });
                 }} icon="user circle" />
