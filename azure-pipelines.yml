@@ -23,8 +23,11 @@ steps:
 - script: docker build -f Dockerfile -t achauncey/frontend-protutorials .
   displayName: '3. create docker container'
 
+- script: docker save -o latestversion${Build.BuildId}.tar achauncey/frontend-protutorials
+  displayName: '3. create docker container'
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: './'
-    ArtifactName: 'achauncey/frontend-protutorials'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/latestversion$(Build.BuildId).tar'
+    ArtifactName: 'docker-frontend'
     publishLocation: 'Container'
