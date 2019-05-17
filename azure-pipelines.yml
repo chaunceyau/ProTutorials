@@ -9,25 +9,13 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: '1. Install Node.js'
+# steps:
+# - task: NodeTool@0
+#   inputs:
+#     versionSpec: '10.x'
+#   displayName: '1. Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: '2. npm install and build'
-
-- script: docker build -f Dockerfile -t achauncey/frontend-protutorials .
-  displayName: '3. create docker container'
-
-- script: docker save -o $(Build.ArtifactStagingDirectory)/latestversion$(Build.SourceVersion).tar achauncey/frontend-protutorials
-  displayName: '3. create docker container'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/latestversion$(Build.SourceVersion).tar'
-    ArtifactName: 'docker-frontend'
-    publishLocation: 'Container'
+# - script: |
+#     npm install
+#     npm run build
+#   displayName: '2. npm install and build'
