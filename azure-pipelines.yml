@@ -23,7 +23,7 @@ steps:
 - script: docker build -f Dockerfile -t achauncey/frontend-protutorials .
   displayName: '3. create docker container'
 
-- script: docker save -o latestversion$(Build.SourceVersion).tar achauncey/frontend-protutorials
+- script: docker save -o $(Build.ArtifactStagingDirectory)/latestversion$(Build.SourceVersion).tar achauncey/frontend-protutorials
   displayName: '3. create docker container'
 
 - task: PublishBuildArtifacts@1
