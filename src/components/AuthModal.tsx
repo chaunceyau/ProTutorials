@@ -7,7 +7,7 @@ export default class AuthModal extends React.Component<IProps, any> {
     render() {
         return (
             <div>
-                auth
+                authentication
             </div>
         );
     }
